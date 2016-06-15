@@ -12,6 +12,8 @@ $(document).ready(function(){
 
 	$(".pixels").height($(".pixels").width());
 
+	$(".grid").height($(".table").height());
+
 	$("#slider").slider({
 		max: (7/4)*side
 	});
@@ -50,10 +52,6 @@ $(document).ready(function(){
 		}
 	};
 
-	function grayscale_draw(e) {
-		//function here;
-	};
-
 	$(".default").mousemove(default_draw);
 	
 	$("#slider").on("slidechange", function(){
@@ -71,7 +69,6 @@ $(document).ready(function(){
 	$("input:radio[name=radio]").click(function(){
 		$(".pixels").removeClass("default");
 		$(".pixels").removeClass("colorful");
-		$(".pixels").removeClass("grayscale");
 
 		if ($("#radio1").is(":checked")){
 			$(".pixels").addClass("default");
@@ -80,10 +77,6 @@ $(document).ready(function(){
 		else if ($("#radio2").is(":checked")){
 			$(".pixels").addClass("colorful");
 			$(".colorful").mousemove(colorful_draw);
-		}
-		else if ($("#radio3").is(":checked")){
-			$(".pixels").addClass("grayscale");
-			$(".grayscale").mousemove(grayscale_draw);
 		}
 	});
 });
