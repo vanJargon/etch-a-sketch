@@ -1,4 +1,4 @@
-# etch-a-sketch
+# Etch-A-Sketch
 A web application replica of the children's toy etch-a-sketch.
 
 User Controls:
