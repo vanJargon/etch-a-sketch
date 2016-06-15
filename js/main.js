@@ -28,6 +28,8 @@ $(document).ready(function(){
 
 	$("#radio").buttonset();
 
+	$("#clear").button();
+
 	var old_clear = $("#slider").slider("value");
 	//Event functions ----------------------------------------------------
 
@@ -46,6 +48,10 @@ $(document).ready(function(){
 			$("."+i).css("background-color", "#ffffff");
 		}
 		old_clear = new_clear
+	});
+
+	$("#clear").on("click", function(){
+		location.reload();
 	});
 
 
